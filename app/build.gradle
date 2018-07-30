@@ -2,10 +2,10 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 24
+    compileSdkVersion 28
     defaultConfig {
         applicationId "com.learzhu.learzhukotlin"
-        minSdkVersion 27
+        minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -17,6 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+//    buildToolsVersion '26.0.2'
     buildToolsVersion '27.0.3'
 }
 
