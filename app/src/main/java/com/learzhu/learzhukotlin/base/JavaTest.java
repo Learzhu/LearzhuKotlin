@@ -1,5 +1,10 @@
 package com.learzhu.learzhukotlin.base;
 
+import com.learzhu.learzhukotlin.fun.FunTest;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * JavaTest.java是液总汇的类。
  *
@@ -12,6 +17,11 @@ package com.learzhu.learzhukotlin.base;
  */
 public class JavaTest {
     public static void main(String args[]) {
+        FunTest funTest = new FunTest();
+        List list = new ArrayList();
+        list.add(1);
+        list.add(2);
+        funTest.joinToString(list);
     }
 
 }
@@ -44,6 +54,15 @@ enum Color {
                 return "CC";
         }
     }
+
+//    @JvmOverloads
+//    private String joinToString(Collection collection,
+//                                String separator="A",
+//                                String prefix,
+//                                String postfix) {
+//
+//    }
+
 }
 //enum Color(int r,int g,int b){
 //        RED(255,0,0),ORANGE(255,165,0),BLUE(0,0,255);
