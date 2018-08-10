@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Button
 import com.learzhu.learzhukotlin.`fun`.FunTest
+import com.learzhu.learzhukotlin.class_object_interface.Button1
 import strings.a
 import strings.lastChar
 import strings.showOff
@@ -39,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         testSplite()
         testRegular()
         testRegular1()
+        testSuper()
     }
 
     companion object {
@@ -77,5 +79,12 @@ class MainActivity : AppCompatActivity() {
                     .|//
                     .|/ \"""
         println(kotlinLogo.trimMargin("."))
+    }
+
+    fun testSuper() {
+        val button = Button1()
+        button.showOff()
+        button.setFocus(true)
+        button.click()
     }
 }

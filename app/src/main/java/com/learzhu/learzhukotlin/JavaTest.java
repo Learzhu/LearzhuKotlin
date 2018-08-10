@@ -1,5 +1,10 @@
 package com.learzhu.learzhukotlin;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+
 /**
  * JavaTest.java是液总汇的类。
  *
@@ -17,6 +22,22 @@ public class JavaTest {
         String ss = "12.345-6.A";
 //        System.out.println(ss.split(".").length);
         System.out.println(ss.split("\\.").length);
+        test();
+    }
+
+    private static void test() {
+        Button button = new Button();
+        button.getCurrentState();
+        //java.io.NotSerializableException: com.learzhu.learzhukotlin.Button
+        try {
+            ObjectOutputStream oo = new ObjectOutputStream(new FileOutputStream(
+                    new File("E:/Person.txt")));
+            oo.writeObject(button);
+            System.out.println("Person对象序列化成功！");
+            oo.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
 
@@ -30,6 +51,13 @@ class A {
 
 class B extends A {
     public void print() {
+        B.super.print();
+        super.print();
         System.out.println("B");
     }
 }
+
+//interface IOpen{
+//    void open(){};
+//}
+
