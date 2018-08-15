@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * JavaTest.java是液总汇的类。
@@ -38,6 +40,11 @@ public class JavaTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    //测试集合的lambda表达式
+    private static void testLambda() {
+        List list = new ArrayList<>();
     }
 }
 
