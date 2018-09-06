@@ -17,6 +17,6 @@ fun main(args: Array<String>) {
     println(listOf(1, 2, 3, 4).penultimate)
 }
 
-interface List<T> {
-    operator fun get(index: Int): T
-}
+//interface List<T> {
+//    operator fun get(index: Int): T
+//}
